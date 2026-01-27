@@ -1,0 +1,186 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Poppins;
+}
+
+body {
+  color: white;
+  overflow-x: hidden;
+}
+
+/* BACKGROUND */
+.bg-layer {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: url("assets/bg.jpg") center/cover no-repeat;
+  filter: blur(2px) brightness(0.7);
+  z-index: -3;
+}
+
+.bg-overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(120deg, rgba(0,0,0,0.3), rgba(0,0,0,0.1));
+  z-index: -2;
+}
+
+/* SIDEBAR */
+.sidebar {
+  position: fixed;
+  width: 220px;
+  height: 100%;
+  background: rgba(0,0,0,0.4);
+  backdrop-filter: blur(15px);
+  padding: 30px;
+}
+
+.sidebar a {
+  display: block;
+  margin: 18px 0;
+  color: white;
+  text-decoration: none;
+}
+
+/* MAIN */
+.main {
+  margin-left: 220px;
+  padding: 60px;
+}
+
+/* FULL PAGE */
+.fullpage {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* HERO */
+.hero {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.name {
+  font-size: 60px;
+  background: linear-gradient(90deg,#00f2fe,#7f00ff);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.hero-buttons {
+  margin-top: 50px;
+}
+
+/* IMAGE */
+.hero-image img {
+  width: 320px;
+  border-radius: 20px;
+  animation: float 4s ease-in-out infinite;
+  box-shadow: 0 0 40px #00f2fe;
+}
+
+/* SECTIONS */
+.section h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.grid {
+  display: flex;
+  gap: 20px;
+}
+
+.card {
+  padding: 30px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 15px;
+}
+
+/* PROJECTS */
+.slider {
+  display: flex;
+  gap: 20px;
+}
+
+.project {
+  min-width: 240px;
+  padding: 30px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 15px;
+}
+
+/* CONTACT */
+.contact-form {
+  max-width: 400px;
+}
+
+.contact-form input,
+textarea {
+  width: 100%;
+  margin: 10px 0;
+  padding: 12px;
+  border-radius: 10px;
+}
+
+/* SOCIAL */
+.social-links {
+  margin-top: 30px;
+  display: flex;
+  gap: 20px;
+}
+
+.social {
+  padding: 12px 25px;
+  border-radius: 30px;
+  color: white;
+  text-decoration: none;
+}
+
+.social.insta {
+  background: linear-gradient(45deg,#f58529,#dd2a7b,#8134af,#515bd4);
+}
+
+.social.whatsapp {
+  background: linear-gradient(45deg,#25D366,#128C7E);
+}
+
+.btn{
+  padding: 12px 28px;
+  border-radius: 30px;
+  background: linear-gradient(45deg,#00f2fe,#7f00ff);
+  color: white;
+  text-decoration: none;
+  margin-right:15px;
+  display:inline-block;
+}
+.btn.ghost{
+  background:transparent;
+  border: 2px solid cyan;
+}
+/* ANIMATIONS */
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0); }
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes orbitRotate {
+  from {
+    transform: rotate(0deg) translateX(140px) rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg) translateX(140px) rotate(-360deg);
+  }
+}
