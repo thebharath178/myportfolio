@@ -184,3 +184,62 @@ textarea {
     transform: rotate(360deg) translateX(140px) rotate(-360deg);
   }
 }
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    padding: 15px;
+  }
+
+  .sidebar h2 {
+    display: none;
+  }
+
+  .main {
+    margin-left: 0;
+    padding: 20px;
+  }
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-img {
+    margin-top: 30px;
+  }
+
+  .hero-img img {
+    width: 220px;
+  }
+
+  .name {
+    font-size: 40px;
+  }
+
+  .hero-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+  }
+
+  .grid, .slider {
+    flex-direction: column;
+  }
+
+  .project, .card {
+    width: 100%;
+  }
+
+  .fullpage {
+    min-height: auto;
+    padding: 60px 0;
+  }
+}
